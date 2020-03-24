@@ -4,7 +4,7 @@
   "description": "Projeto backend para a semana 11 Omnistack da Rocketseat",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "keywords": [
     "reactjs",
@@ -15,7 +15,9 @@
   "author": "Leandro Vieira",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

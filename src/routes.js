@@ -1,7 +1,5 @@
 const express = require('express');
-const app = express();
-
-app.use(express.json());
+const routes = express.Router();
 
 /**
  * Métodos HTTP:
@@ -27,19 +25,19 @@ app.use(express.json());
 
 /**
  * Driver: SELECT * FROM users
- * Query Builder: table('users').select('*').where()
+ * Query Builder: table('users').select('*').where() <-- usaremos essa abordagem com Knex.js
  */
 
 // Rota / Recurso
-app.post('/users', (request, response) => {
-    const body = request.body;
+routes.post('/users', (request, response) => {
+   const body = request.body;
 
-    console.log(body);
+   console.log(body);
 
-    return response.json({
-        evento: 'Semana Omnistack 11',
-        aluno: 'Leandro Vieira Santos'
-    });
+   return response.json({
+       evento: 'Semana Omnistack 11',
+       aluno: 'Leandro Vieira Santos'
+   });
 });
 
-app.listen(3333);
+module.exports = routes;
